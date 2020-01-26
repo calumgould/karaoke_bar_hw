@@ -11,7 +11,13 @@ class Guest
   end
 
   def remove_money_from_guest(amount)
-    return @wallet -= amount
+    if @wallet > 0
+      return @wallet -= amount
+    end
+  end
+
+  def add_money_to_guest(amount)
+    return @wallet += amount
   end
 
 
